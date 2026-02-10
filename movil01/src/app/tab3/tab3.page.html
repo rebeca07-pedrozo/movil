@@ -1,17 +1,72 @@
+<!-- componente 1: Header -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-title>Tab 3 - Gestión</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- componente 2: Content -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
+  <!-- componente 3: Breadcrumbs -->
+  <ion-breadcrumbs>
+    <ion-breadcrumb>Inicio</ion-breadcrumb>
+    <ion-breadcrumb>Gestión</ion-breadcrumb>
+    <ion-breadcrumb>Tab 3</ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- componente 4: Item Divider -->
+  <ion-item-divider>
+    <ion-label>Opciones principales</ion-label>
+  </ion-item-divider>
+
+  <!-- componente 5: Reorder Group -->
+  <ion-reorder-group disabled="false">
+    <ion-item>
+      <ion-label>Elemento 1</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+    <ion-item>
+      <ion-label>Elemento 2</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+
+  <!-- componente 6: Textarea -->
+  <ion-item>
+    <ion-label position="stacked">Comentario</ion-label>
+    <ion-textarea placeholder="Escribe aquí..."></ion-textarea>
+  </ion-item>
+
+  <!-- componente 7: Loading Trigger -->
+  <ion-button id="open-loading" expand="block" color="warning">
+    Cargar datos
+  </ion-button>
+
+  <ion-loading
+    trigger="open-loading"
+    message="Cargando información..."
+    duration="2000">
+  </ion-loading>
+
+  <!-- componente 8: Badge -->
+  <ion-item>
+    <ion-label>Estado del sistema</ion-label>
+    <ion-badge color="success" slot="end">Activo</ion-badge>
+  </ion-item>
+
+  <!-- componente 9: Note -->
+  <ion-note color="medium">
+    Última actualización hace 5 minutos
+  </ion-note>
+
+  <!-- componente 10: Footer -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title size="small">© 2026 - Sistema de Gestión</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+ 
+ 
   <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
