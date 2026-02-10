@@ -13,13 +13,63 @@
     </ion-toolbar>
   </ion-header>
   <ion-datetime></ion-datetime>
+<ion-avatar>
+  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+</ion-avatar>
 
-<ion-fab>
+
+<ion-fab slot="fixed" horizontal="center" vertical="center">
   <ion-fab-button>
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button>
+      <ion-icon name="chevron-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="bottom">
+    <ion-fab-button>
+      <ion-icon name="chevron-down"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-button>
+      <ion-icon name="chevron-back"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="chevron-back"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
 </ion-fab>
 
+<ion-accordion-group>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ion-label>First Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">First Content</div>
+  </ion-accordion>
+  <ion-accordion value="second">
+    <ion-item slot="header" color="light">
+      <ion-label>Second Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Second Content</div>
+  </ion-accordion>
+  <ion-accordion value="third">
+    <ion-item slot="header" color="light">
+      <ion-label>Third Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Third Content</div>
+  </ion-accordion>
+</ion-accordion-group>
   
   <app-explore-container name="En la pagina nueva"></app-explore-container>
 </ion-content>
