@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { IonDatetime } from '@ionic/angular/standalone';
+import { IonFab, IonFabButton, IonIcon } from '@ionic/angular/standalone';
+
+import { addIcons } from 'ionicons';
+import { add } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tab2',
@@ -8,6 +13,9 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor() {
+    addIcons({ add });
+  }
+  
 
 }
