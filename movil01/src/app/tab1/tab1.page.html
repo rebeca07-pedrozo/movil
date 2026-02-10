@@ -1,17 +1,76 @@
+<!-- componente 1: Header -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="secondary">
+    <ion-title>Dashboard Diferente</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- componente 2: Content -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- componente 3: Grid -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">Columna A</ion-col>
+      <ion-col size="6">Columna B</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- componente 4: Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumen General</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Datos clave del sistema.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- componente 5: Button -->
+  <ion-button expand="block" color="primary">
+    Ejecutar acción
+  </ion-button>
+
+  <!-- componente 6: Segment -->
+  <ion-segment value="dia">
+    <ion-segment-button value="dia">
+      <ion-label>Día</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="mes">
+      <ion-label>Mes</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- componente 7: Select -->
+  <ion-item>
+    <ion-label>Filtro</ion-label>
+    <ion-select placeholder="Selecciona">
+      <ion-select-option value="1">Opción 1</ion-select-option>
+      <ion-select-option value="2">Opción 2</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- componente 8: Toast Trigger -->
+  <ion-button id="open-toast" color="success">
+    Mostrar mensaje
+  </ion-button>
+
+  <ion-toast
+    trigger="open-toast"
+    message="Acción realizada correctamente"
+    duration="2000">
+  </ion-toast>
+
+  <!-- componente 9: Progress Bar -->
+  <ion-item>
+    <ion-label>Progreso</ion-label>
+    <ion-progress-bar value="0.5"></ion-progress-bar>
+  </ion-item>
+
+  <!-- componente 10: Chip -->
+  <ion-chip color="tertiary">
+    <ion-icon name="analytics"></ion-icon>
+    <ion-label>Analytics</ion-label>
+  </ion-chip>
+
 </ion-content>
