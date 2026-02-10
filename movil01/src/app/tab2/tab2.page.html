@@ -1,75 +1,58 @@
+<!-- componente 1: Header -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Encabezado de la pagina
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Panel de Control</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- componente 2: Content -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Hola</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-datetime></ion-datetime>
-<ion-avatar>
-  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-</ion-avatar>
+
+  <!-- componente 3: Searchbar -->
+  <ion-searchbar placeholder="Buscar datos..."></ion-searchbar>
+
+  <!-- componente 4: Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumen de Análisis</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Bienvenido a tu plataforma de visualización.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- componente 5: List -->
+  <ion-list>
+
+    <!-- componente 6: Item Notificaciones -->
+    <ion-item>
+      <ion-icon name="notifications" slot="start"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+      <ion-badge color="danger" slot="end">5</ion-badge>
+    </ion-item>
+
+    <!-- componente 7: Toggle -->
+    <ion-item>
+      <ion-toggle [checked]="true">Activar Reportes Reales</ion-toggle>
+    </ion-item>
+
+    <!-- componente 8: Checkbox -->
+    <ion-item>
+      <ion-checkbox labelPlacement="end">Confirmar lectura</ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- componente 9: Input -->
+  <ion-item>
+    <ion-input label="ID de Usuario" placeholder="Ingresa tu ID"></ion-input>
+  </ion-item>
+
+  <!-- componente 10: Range -->
+  <ion-item>
+    <ion-range aria-label="Rango" min="0" max="100" [pin]="true"></ion-range>
+  </ion-item>
 
 
-<ion-fab slot="fixed" horizontal="center" vertical="center">
-  <ion-fab-button>
-    <ion-icon name="add"></ion-icon>
-  </ion-fab-button>
-  <ion-fab-list side="top">
-    <ion-fab-button>
-      <ion-icon name="chevron-up"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="end">
-    <ion-fab-button>
-      <ion-icon name="chevron-forward"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
-      <ion-icon name="chevron-forward"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="bottom">
-    <ion-fab-button>
-      <ion-icon name="chevron-down"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="start">
-    <ion-fab-button>
-      <ion-icon name="chevron-back"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-button>
-      <ion-icon name="chevron-back"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-</ion-fab>
 
-<ion-accordion-group>
-  <ion-accordion value="first">
-    <ion-item slot="header" color="light">
-      <ion-label>First Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">First Content</div>
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item slot="header" color="light">
-      <ion-label>Second Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">Second Content</div>
-  </ion-accordion>
-  <ion-accordion value="third">
-    <ion-item slot="header" color="light">
-      <ion-label>Third Accordion</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">Third Content</div>
-  </ion-accordion>
-</ion-accordion-group>
-  
-  <app-explore-container name="En la pagina nueva"></app-explore-container>
 </ion-content>
